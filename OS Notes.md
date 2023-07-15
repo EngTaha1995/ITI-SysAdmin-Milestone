@@ -1,5 +1,5 @@
-###OS###
-########
+### OS
+------
 
 TimeSharing Cpu vs Multicore cpu with more than 1 ALU.
 
