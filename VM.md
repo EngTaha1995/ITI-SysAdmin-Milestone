@@ -1,4 +1,4 @@
-##Networking
+## Networking
 
 Bridge: vm is in network as a real pc in physical network
  		takes ip from dhcp on router can be a server accessed worldwide.
@@ -7,13 +7,13 @@ NAT: VMs are on a virtual switch and can access internet, cant be published as p
 
 Host : VMs communicate internally not connecting to internet
 
-##Virtualization types 
+## Virtualization types 
 
 type 1 : Bare Metal hypervisor using virtualization OS Like ESXI Server.
 
 type 2 : using guest os like windows with SW like VM workstation.
 
-##Snapshot Vs Clone
+## Snapshot Vs Clone
 Snapshots save vm files like at certain time : 
 
 		state of vm disks.
