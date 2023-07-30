@@ -105,9 +105,9 @@ Set-NetFirewallprofile -profile Domain,public,private -Enabled Enabled //turn on
 	to eleminated MBR limitation of 4 partitions.
 
 * Disk Management in windows can apply RAID levels and other useful techniques.
-*MBR Limited to partition extend only by freespace next to it or use(Spanned disk).
-*GPT Disks are Dynamic disks can be extended by any free space on disk.
-*Spanned Volume(partition) can use multpile disks on GPT Scheme!
-*You Can create VHD (Virtual Hard disk) of any size based on multiple disks.
-*Data Deduplication is available at windows server features.
-*Data Deduplication is applied to chunks of files but not applied to databases.
+* MBR Limited to partition extend only by freespace next to it or use(Spanned disk).
+* GPT Disks are Dynamic disks can be extended by any free space on disk.
+* Spanned Volume(partition) can use multpile disks on GPT Scheme!
+* You Can create VHD (Virtual Hard disk) of any size based on multiple disks.
+* Data Deduplication is available at windows server features.
+* Data Deduplication is applied to chunks of files but not applied to databases.
