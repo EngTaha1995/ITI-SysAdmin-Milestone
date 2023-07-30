@@ -1,4 +1,4 @@
-##OSI Model :
+## OSI Model :
 
 Application layer : Like mail server which outputs final packet data.
 Presentation layer : make data readable by applying data standards like ASCII.
