@@ -100,7 +100,7 @@ Every pc joined to domain can leave with local admin in login (./USERNAME) or DC
 	
 	
 	
-		
+# Hints & Tips:	
 * Disk Management in windows can apply RAID levels and other useful techniques.
 * MBR Limited to partition extend only by freespace next to it or use(Spanned disk).
 * GPT Disks are Dynamic disks can be extended by any free space on disk.
