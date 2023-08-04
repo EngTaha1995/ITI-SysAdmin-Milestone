@@ -73,7 +73,7 @@ fdisk /dev/diskname | p to print disk info.
 
 # Storage methods for better use of disks space: 
 * Stratis: a tool used to make logical partitions to be used across all available disks (better than LVM).
-Stratis steps:
+# Stratis steps:
 	$install stratis-cli, stratisd
 	$stratis pool create pool_name /dev/sda1 /dev/sda2 ....etc.
 	$stratis pool add_data pool_name /dev/sdb1  //add disk to pool.
