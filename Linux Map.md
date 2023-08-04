@@ -54,12 +54,12 @@ semanage port -a -t http_port_t 9800 -p tcp | allow http on port 9800 tcp.
 Command | Info
 --------|-----
 fdisk /dev/diskname | p to print disk info. 
-| o add mbr table to disk.
-| g add gpt to disk.
-| n new partition.
-| d delete partition.
-| q quit without saving.
-| w quit with saving.
+ | o add mbr table to disk.
+ | g add gpt to disk.
+ | n new partition.
+ | d delete partition.
+ | q quit without saving.
+ | w quit with saving.
 
 * fdisk used to manage partition table of disks like MBR, GPT.
 
