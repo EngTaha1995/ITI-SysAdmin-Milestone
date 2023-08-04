@@ -31,3 +31,15 @@ firewall-cmd --new-zone zoneName | Create new zone for certain subnet in the net
 * Firewall zone available for every connection interface.
 * Reload firewall after adding/removing/changing ports or ip`s.
 * config files are saved in /etc/firewalld/zones/public.xml
+
+
+# SELinux:
+* Kernel Module for enhanced security for all applications in linux environment.
+* check config file in /etc/selinux/config.
+command|Info
+-------|----
+sestatus|check selinux status
+getenforce | show current mode for selinux.
+setenforce (1,0)|turn on selinux
+ls -z | showing files with thier security/context.
+chcon -t | change file context type for selinux.
