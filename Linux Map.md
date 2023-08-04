@@ -35,13 +35,30 @@ firewall-cmd --new-zone zoneName | Create new zone for certain subnet in the net
 
 # SELinux:
 
-command | Info
+Command | Info
 --------|----
 sestatus|check selinux status
 getenforce | show current mode for selinux.
 setenforce (1,0)|turn on selinux
 ls -z | showing files with thier security/context.
 chcon -t | change file context type for selinux.
+semanage fcontext -l | list all files context in selinux.
+semanage port -l | list used ports by services.
+semanage port -a -t http_port_t 9800 -p tcp | allow http on port 9800 tcp.
 
 * Kernel Module for enhanced security for all applications in linux environment.
 * check config file in /etc/selinux/config.
+
+# fdisk: 
+* fdisk used to manage partition table of disks like MBR, GPT.
+Command | Info
+--------|-----
+fdisk /dev/diskname | p to print disk info. o add mbr table to disk. g add gpt to disk.
+
+
+
+# NFS (Network File Share):
+* Centralized file server to be accessed by all clients.
+
+# Changing root password: 
+* boot into grub menu use 'e'
