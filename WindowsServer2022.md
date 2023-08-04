@@ -1,12 +1,13 @@
 ## Win Server Notes:
 -------
-Every pc joined to domain can leave with local admin in login (./USERNAME) or DC admin user.
+* SysAdmin Tip: never restart pc to slove something...try to solve at first.
 
 # WORKGROUP Vs Domain: 
 	Wokrgroup : is peer to peer connection, users are saved in  system32/config/SAM.
 	with local policies.
 	Domain : is Client / Server Connection, Users are saved on DC(Domain Controller).
-
+	Every pc joined to domain can leave with local admin in login (./USERNAME) or DC admin user.
+	
 # Remote connection with winServer :
 	SSH, Telnet, RSAT, Group Policy, Remote Desktop Connection.
 
@@ -93,10 +94,43 @@ Every pc joined to domain can leave with local admin in login (./USERNAME) or DC
 	In RODC you can delegate a user to change in RODC or shutdown it for example.
 	RODC Updates from main DC After a while.
 	
-# Remote Desktop Connection Methods:
+# Remote Desktop Connection:
 	RDC: remote desktop connection provieded by windows.
-	Telnet: connect as commands
+	Telnet: connect as commands.
 	SSH: Like telnet with security.
+	You Can connect to DC Remotely with AD account.
+	to manage more than one pc using remote connection try advanced tool like rdcman.msi
+	RSAT: install server manager on client pc.
+	Credential: username & password used to connect to a machine.
+	mmc: a tool used to manage computer (shortcut to different computer setting).
+	WAC: windows admin center >> advanced tool to manage server from client pc using web browser (web-site).
+	//wac method is limited for some services.
+	
+# DHCP & GroupPolicy:
+	DHCP for multi servers can be managed from one server.
+	DHCP for two or more servers can be used as load balancing.
+	DHCP Failover (Clustering) is used to manage multi dhcp servers.
+	DHCP Scope`s excluded addresses can be used to things need static ip like printers.
+	DHCP uses UDP port 67,68.
+	DNS uses both TCP/UDP.
+	DHCP uses database.
+	Default lease time for DHCP: 8 days.
+	DHCP Lease is automatically renewed to no. of days/hours with every login with an IP.
+	At 50% of lease time client pc sends a renewal request to DHCP server.
+	You can make a super scope from two or more scopes in DHCP (if one scope ended).
+	Dhcp.mdb >> system32/DHCP/ //where all dhcp settings are saved, updated every hour.
+	Use ipconfig /renew to optain new ip from dhcp.
+	You can block certain pc by MAC from DHCP ip request.
+	APIPA is only limited to LAN connections (without IP`s).
+	DORA process: a pc sends broadcast message to optain an ip address.
+	The DHCP offer would be unicast message to desired pc.
+	The exact DHCP server used by a machine is located in ipconfig /all.
+	DHCP Server scopes & settings can be backuped in a file.
+	Every new installed windows has default policies within (Local Group Policy).
+	Group policy management is applied to all AD Users or some of them(OU in AD users & computers).
+	Every change in group policy should be followed by 'gpupdate' command in client machine.
+	OU contains both objects & users.
+	There is a default group policy applied on domain controller as a whole.
 	
 	
 	
@@ -124,4 +158,3 @@ Every pc joined to domain can leave with local admin in login (./USERNAME) or DC
 * To leave domain you have to provide local admin password.
 * Always update Group policy using cmd : gpupdate /force.
 * You can always enable Recycle bin at server manager gui to recover deleted settings like AD accounts.
-* 
