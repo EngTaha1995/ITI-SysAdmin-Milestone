@@ -27,6 +27,7 @@
 	site binding: refers to site ip and protocol to access it.
 	ApplicationPool: setting for application running on web like asp.net, ApplicationPool version in the .net version used.
 	you can convert a website to application pool.
+	FTP: is accessed by username and password in server/machine installed on it.
 	FTP Server: can be managed by website/CMD/Client app like filezilla.
 	FTP: port 20,21 , one for data control, the other for upload.
 	You can connect to ftp using windows explorer.
